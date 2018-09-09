@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.rest.assured.listeners.TestListener"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.rest.assured.test.GetCurrentWeatherDataAPI">
+        <methods>
+          <include name="GetMainPressureByCityCode" invocation-numbers="0"/>
+          <include name="GetMainPressureByCityId" invocation-numbers="0"/>
+          <include name="GetMainPressureByCityName" invocation-numbers="0"/>
+          <include name="resetBaseURL"/>
+          <include name="IntializeBaseURL"/>
+        </methods>
+      </class> <!-- com.rest.assured.test.GetCurrentWeatherDataAPI -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

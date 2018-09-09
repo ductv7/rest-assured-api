@@ -1,0 +1,9 @@
+https://developers.google.com/places/web-service/details
+
+Standard Places API
+
+AIzaSyDrzH05ZO1m0HuRN3uN6LhcmnkKEycEoT8
+
+All document relates to Rest Assured
+
+https://github.com/rest-assured/rest-assured/wiki/Usage
