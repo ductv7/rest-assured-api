@@ -32,7 +32,7 @@ public class GetCurrentWeatherDataAPI extends BaseTest {
 		then().
 				assertThat().statusCode(200).and().extract().response();
 		
-		assertTrue (rawToJson(res).get("main.pressure").equals(1021));
+		assertTrue (rawToJson(res).get("main.pressure").equals(1020));
 	}
 	
 	
@@ -60,7 +60,7 @@ public class GetCurrentWeatherDataAPI extends BaseTest {
 				get(Resources.getWeatherAPI()).
 		then().
 				assertThat().statusCode(200).and().contentType(ContentType.JSON).
-				and().body("main.pressure", equalTo(1021)).extract().response();
+				and().body("main.pressure", equalTo(1020)).extract().response();
 	}
 	
 }

@@ -18,19 +18,17 @@
   </resource>
   </resources>
 -->
+<pluginManagement>
   <plugins>
   	<plugin>
   	
   	<groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <suiteXmlFiles>
-  						<suiteXmlFile>testng.xml</suiteXmlFile>
-  					</suiteXmlFiles>
-                </configuration>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.7.0</version>
+    <configuration>
+         <source>1.8</source>
+         <target>1.8</target>
+    </configuration>
   	</plugin>
   	
   	<plugin>
@@ -38,24 +36,13 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.12.4</version>
         <configuration>
-          <properties>
-            <property>
-              <name>usedefaultlisteners</name>
-              <value>true</value> <!-- disabling default listeners is optional -->
-            </property>
-            <property>
-              <name>listener</name>
-              <value>com.rest.assured.listeners.TestListener</value>
-            </property>
-            <property>
-              <name>reporter</name>
-              <value>listenReport.Reporter</value>
-            </property>
-          </properties>
+          <suiteXmlFiles>
+  				<suiteXmlFile>testng.xml</suiteXmlFile>
+  		</suiteXmlFiles>
         </configuration>
       </plugin>
-  
   </plugins>
+  </pluginManagement>
 </build>
   
  <properties>
