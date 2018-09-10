@@ -6,6 +6,7 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.Platform;
 import com.rest.assured.common.BaseTest;
+import com.rest.assured.common.Global;
 
 import java.io.File;
 import java.sql.Date;
@@ -25,7 +26,7 @@ public class ExtentManager {
     private static String windowsPath = System.getProperty("user.dir")+ "\\TestReport";
     private static String macReportFileLoc = macPath + "/" + "Automation Report" +".html";
     private static String winReportFileLoc = windowsPath + "\\" + "Automation Report" +".html";
-    private static String configFileName = System.getProperty("user.dir") + "/settings/extent-config.xml";
+    //private static String configFileName = System.getProperty("user.dir") + "/settings/extent-config.xml";
 
     public static ExtentReports getInstance() {
         if (extent == null)
@@ -38,7 +39,7 @@ public class ExtentManager {
         platform = getCurrentPlatform();
         String fileName = getReportFileLocation(platform);
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
-        htmlReporter.loadConfig(configFileName);
+        htmlReporter.loadXMLConfig(Global.fileExtentReport);        
         //htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
         //htmlReporter.config().setChartVisibilityOnOpen(true);
         //htmlReporter.config().setTheme(Theme.STANDARD);
