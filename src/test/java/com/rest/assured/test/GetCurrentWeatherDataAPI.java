@@ -24,7 +24,6 @@ public class GetCurrentWeatherDataAPI extends BaseTest {
 	@Test
 	public void GetMainPressureByCityName() {
 		
-		IntializeBaseURL();
 		Response res = given().
 				param("q", lp.getData("cityName")).
 			    param("appid", Global.appId).
@@ -33,7 +32,7 @@ public class GetCurrentWeatherDataAPI extends BaseTest {
 		then().
 				assertThat().statusCode(200).and().extract().response();
 		
-		assertTrue (rawToJson(res).get("main.pressure").equals(1017));
+		assertTrue (rawToJson(res).get("main.pressure").equals(1021));
 	}
 	
 	
@@ -51,18 +50,17 @@ public class GetCurrentWeatherDataAPI extends BaseTest {
 //				body("main.pressure", equalTo(1017)).extract().response();
 //	}
 //	
-//	@Test 
-//	public void GetMainPressureByCityId(){
-//		
-//		IntializeBaseURL();
-//		given().
-//				param("q", 2643743).
-//				param("appid", Global.appId).
-//		when().
-//				get(Resources.getWeatherAPI()).
-//		then().
-//				assertThat().statusCode(200).and().contentType(ContentType.JSON).
-//				and().body("main.pressure", equalTo(1017)).extract().response();
-//	}
-//	
+	@Test 
+	public void GetMainPressureByCityId(){
+		
+		given().
+				param("id", 2643743).
+				param("appid", Global.appId).
+		when().
+				get(Resources.getWeatherAPI()).
+		then().
+				assertThat().statusCode(200).and().contentType(ContentType.JSON).
+				and().body("main.pressure", equalTo(1021)).extract().response();
+	}
+	
 }
