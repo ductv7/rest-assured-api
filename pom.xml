@@ -163,6 +163,7 @@
 			<version>2.6</version>
 		</dependency>
 		
+		<!-- Log4j2 -->
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 		<dependency>
     		<groupId>org.apache.logging.log4j</groupId>

@@ -1,6 +1,11 @@
 package com.rest.assured.common;
 
-public class Global {
+public final class Global {
+	
+	private Global(){
+		
+		//empty constructor
+	}
 	
 	public static String fileEnv="settings/env.properties";
 	

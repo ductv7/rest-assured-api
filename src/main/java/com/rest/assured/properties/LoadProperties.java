@@ -2,7 +2,7 @@ package com.rest.assured.properties;
 
 import com.rest.assured.common.*;
 
-public class LoadProperties {
+public class LoadProperties extends BasicProperties{
 	
 	BasicProperties bp = new BasicProperties();
 	

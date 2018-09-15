@@ -7,3 +7,7 @@ AIzaSyDrzH05ZO1m0HuRN3uN6LhcmnkKEycEoT8
 All document relates to Rest Assured
 
 https://github.com/rest-assured/rest-assured/wiki/Usage
+
+1. Create maven project with log4j
+mvn archetype:generate -DgroupId=com.howtodoinjava -DartifactId=Log4jTestProject
+ -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
